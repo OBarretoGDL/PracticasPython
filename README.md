@@ -1,41 +1,41 @@
-# Calculadora de Índice de Masa Corporal (IMC)
+# Máquina de Galton
 
-Este proyecto es parte del módulo uno del curso de Python. El objetivo es crear un programa que calcule el Índice de Masa Corporal (IMC) basado en los datos proporcionados por el usuario: nombre, apellido paterno, apellido materno, edad, peso y estatura. El programa valida los datos ingresados y asegura que el IMC solo se calcule para usuarios mayores de edad.
+La Máquina de Galton es un dispositivo inventado por Sir Francis Galton para demostrar la ley de los grandes números y la distribución normal. Este proyecto simula una Máquina de Galton utilizando Python y grafica la distribución de las canicas que caen a través de los niveles del dispositivo.
 
-## Descripción
+## Descripción del Proyecto
 
-El Índice de Masa Corporal (IMC) es una medida que se utiliza para determinar si una persona tiene un peso saludable en relación con su estatura. El IMC se calcula utilizando la siguiente fórmula:
+Este proyecto consta de dos partes principales:
 
-\[ \text{IMC} = \frac{\text{peso (kg)}}{\text{estatura (m)}^2} \]
-
-El programa realiza las siguientes acciones:
-1. Solicita al usuario su nombre, apellido paterno, apellido materno, edad, peso y estatura.
-2. Valida que la edad sea mayor a 18 años.
-3. Calcula el IMC.
-4. Determina el estado del IMC (peso bajo, peso normal, sobrepeso, obesidad leve, obesidad media, obesidad mórbida).
-5. Imprime los datos ingresados y el resultado del IMC junto con su clasificación.
+1. **Simulación de la Máquina de Galton**: Una función que simula el comportamiento de una Máquina de Galton.
+2. **Generación de la Gráfica**: Una función que grafica la distribución de las canicas utilizando `matplotlib`.
 
 ## Requisitos
 
-- Python 3.x
+Para ejecutar este proyecto, necesitarás tener instaladas las siguientes bibliotecas de Python:
 
-## Cómo usar el programa
+- `numpy`
+- `matplotlib`
 
-1. Clona este repositorio o descarga los archivos del proyecto.
-2. Ejecuta el archivo principal del programa (por ejemplo, `main.py`).
-3. Sigue las instrucciones en pantalla para ingresar los datos solicitados.
+Puedes instalarlas utilizando `pip`:
 
-## Ejemplo de uso
+```sh
+pip install numpy matplotlib
 
-Ingrese solo su primer nombre: Juan
-Ingrese su Apellido Paterno: Pérez
-Ingrese su apellido Materno: López
-Ingrese su edad: 25
-Ingrese su estatura en formato 'Metros' (Eg 1.75): 1.80
-Ingrese su peso en formato 'Kilos' (Eg 85.3): 75.5
+# Explicación del Código
+Función MaquinaDeGalton:
 
-Buen día Juan Pérez López
-De acuerdo a los datos proporcionados:
-Edad: 25, Estatura: 1.80 m, y Peso: 75.5 kg
-se pudo determinar un Índice de Masa Corporal de 23.31,
-lo que nos indica que usted se encuentra en 'Peso Normal'.
+Esta función simula el comportamiento de una Máquina de Galton.
+Toma como parámetros el número de canicas (noCanicas) y el número de niveles (noNiveles).
+Utiliza un bucle para simular el recorrido de cada canica a través de los niveles, aumentando o disminuyendo un contador basado en un valor booleano aleatorio.
+Al final, retorna una lista con la distribución de las canicas.
+Función plt_Graf:
+
+Esta función toma los resultados de la simulación y los grafica utilizando matplotlib.
+Utiliza un histograma para mostrar la distribución de las canicas a lo largo de las posiciones finales.
+Ejecución de la Simulación y Generación de la Gráfica:
+
+Se definen los parámetros noCanicas y noNiveles.
+Se llama a la función MaquinaDeGalton para obtener los resultados de la simulación.
+Se llama a la función plt_Graf para graficar los resultados.
+Conclusión
+Este proyecto proporciona una simulación sencilla y visualización de una Máquina de Galton. Permite observar cómo las canicas se distribuyen a lo largo de los niveles y cómo tienden a formar una distribución normal. Este ejemplo puede ser extendido y modificado para explorar diferentes aspectos de la teoría de probabilidades y estadísticas.
