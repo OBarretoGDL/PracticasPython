@@ -1,41 +1,31 @@
-# Calculadora de Índice de Masa Corporal (IMC)
-
-Este proyecto es parte del módulo uno del curso de Python. El objetivo es crear un programa que calcule el Índice de Masa Corporal (IMC) basado en los datos proporcionados por el usuario: nombre, apellido paterno, apellido materno, edad, peso y estatura. El programa valida los datos ingresados y asegura que el IMC solo se calcule para usuarios mayores de edad.
+# Pokédex
 
 ## Descripción
 
-El Índice de Masa Corporal (IMC) es una medida que se utiliza para determinar si una persona tiene un peso saludable en relación con su estatura. El IMC se calcula utilizando la siguiente fórmula:
-
-\[ \text{IMC} = \frac{\text{peso (kg)}}{\text{estatura (m)}^2} \]
-
-El programa realiza las siguientes acciones:
-1. Solicita al usuario su nombre, apellido paterno, apellido materno, edad, peso y estatura.
-2. Valida que la edad sea mayor a 18 años.
-3. Calcula el IMC.
-4. Determina el estado del IMC (peso bajo, peso normal, sobrepeso, obesidad leve, obesidad media, obesidad mórbida).
-5. Imprime los datos ingresados y el resultado del IMC junto con su clasificación.
+Pokémon Info Collector es un proyecto que utiliza la [PokeAPI](https://pokeapi.co/) para obtener información sobre Pokémon, guardarla en archivos JSON y mostrar los detalles junto con una imagen del Pokémon en un entorno Jupyter Notebook. El proyecto proporciona una interfaz interactiva para consultar datos y visualizar imágenes de Pokémon.
 
 ## Requisitos
 
-- Python 3.x
+Para ejecutar este proyecto, necesitas tener instalado Python 3 y las siguientes librerías:
 
-## Cómo usar el programa
+- `requests`: Para realizar solicitudes HTTP a la API de Pokémon.
+- `ipywidgets`: Para crear y mostrar widgets en un entorno Jupyter Notebook.
+- `IPython`: Para la visualización de imágenes y datos en Jupyter Notebook.
 
-1. Clona este repositorio o descarga los archivos del proyecto.
-2. Ejecuta el archivo principal del programa (por ejemplo, `main.py`).
-3. Sigue las instrucciones en pantalla para ingresar los datos solicitados.
+## Uso
+Obtener Información del Pokémon:
 
-## Ejemplo de uso
+Abre un entorno Jupyter Notebook.
+Importa las librerías necesarias y define las funciones proporcionadas en el proyecto.
+Llama a la función mostrar_pokemon con el nombre o número del Pokémon que deseas consultar.
 
-Ingrese solo su primer nombre: Juan
-Ingrese su Apellido Paterno: Pérez
-Ingrese su apellido Materno: López
-Ingrese su edad: 25
-Ingrese su estatura en formato 'Metros' (Eg 1.75): 1.80
-Ingrese su peso en formato 'Kilos' (Eg 85.3): 75.5
+## Notas
+Asegúrate de ejecutar el código en un entorno compatible con ipywidgets, como Jupyter Notebook.
+Los archivos JSON se guardarán en la carpeta pokedex. Puedes modificar la ruta en el código si deseas guardar los archivos en otra ubicación.
+Contribuciones
 
-Buen día Juan Pérez López
-De acuerdo a los datos proporcionados:
-Edad: 25, Estatura: 1.80 m, y Peso: 75.5 kg
-se pudo determinar un Índice de Masa Corporal de 23.31,
-lo que nos indica que usted se encuentra en 'Peso Normal'.
+Puedes instalar las librerías necesarias con el siguiente comando:
+
+```bash
+pip install requests ipywidgets
+
